@@ -117,7 +117,7 @@ export default {};
       <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
         <!-- Col Title -->
         <div class="text-xs uppercase text-gray-400 font-medium mb-6">
-          Customization
+          About
         </div>
 
         <!-- Links -->

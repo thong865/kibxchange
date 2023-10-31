@@ -1,6 +1,7 @@
-
-import type { RateBankrate } from '#build/components';
 <script setup>
+definePageMeta({
+  layout:'default'
+})
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
 const refr = ref(1);
 const tabList = reactive([
@@ -25,7 +26,7 @@ const { pending, data: crptoData } = await useLazyAsyncData(
     watch: [refr],
   }
 );
-const { pending:rapad, data: fliatBankData } = await useLazyAsyncData(
+const { pending:rapad, data: fliatBankData,error:raerror } = await useLazyAsyncData(
   "fliatBankData",
   () =>
     $fetch("/api/FliatBankRate", {
@@ -66,7 +67,7 @@ const { pending:rapad, data: fliatBankData } = await useLazyAsyncData(
           <RateCrypto :cdata="crptoData" />
         </TabPanel>
         <TabPanel>
-          <RateBankrate :cdata="fliatBankData" />
+          <!-- <RateBankrate :cdata="fliatBankData" v-if="!raerror" /> -->
         </TabPanel>
       </TabPanels>
     </TabGroup>

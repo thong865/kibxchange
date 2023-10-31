@@ -62,7 +62,7 @@ const ccsymbol = [
 </style>
 <template>
   <div>
-    <navbar-client />
+    
     <main class="flex flex-col items-center justify-center mt-32">
       <section
         class="flex flex-wrap items-center -mx-3 font-sans px-4 mx-auto w-full lg:max-w-screen-lg sm:max-w-screen-sm md:max-w-screen-md pb-20"
